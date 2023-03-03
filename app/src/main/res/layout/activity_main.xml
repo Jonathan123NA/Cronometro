@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_resultado"
+        android:layout_width="371dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:text="@string/tv_cronometro"
+        android:textColor="#000000"
+        android:textSize="60sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_resultado">
+
+        <TableRow
+            android:layout_width="389dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/btn_start"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="#B0FF79"
+                android:onClick="onClickStart"
+                android:text="@string/btn_iniciar"
+                android:textColor="#000000"
+                android:textSize="12sp"
+                app:cornerRadius="20dp"
+                app:strokeColor="#2FFF00"
+                app:strokeWidth="2dp" />
+
+            <Button
+                android:id="@+id/btn_stop"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="#5A89FF"
+                android:onClick="onClickStop"
+                android:text="@string/btn_parar"
+                android:textColor="#000000"
+                android:textSize="12sp"
+                app:cornerRadius="20dp"
+                app:strokeColor="#0087FF"
+                app:strokeWidth="2dp" />
+
+            <Button
+                android:id="@+id/btn_reset"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="#FF4B4B"
+                android:onClick="onClickReset"
+                android:text="@string/btn_reiniciar"
+                android:textColor="#000000"
+                android:textSize="12sp"
+                app:cornerRadius="20dp"
+                app:strokeColor="#FF0000"
+                app:strokeWidth="2dp" />
+
+            <Button
+                android:id="@+id/btn_lap"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="#FFDA53"
+                android:onClick="onClickLap"
+                android:text="@string/btn_vuelta"
+                android:textColor="#000000"
+                android:textSize="12sp"
+                app:cornerRadius="20dp"
+                app:strokeColor="#FFAB00"
+                app:strokeWidth="2dp" />
+        </TableRow>
+
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/tv_laps"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="20dp"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center_horizontal"
+        android:textColor="#151515"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
+</androidx.constraintlayout.widget.ConstraintLayout>

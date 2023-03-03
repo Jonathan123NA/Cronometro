@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Cronometro</string>
+    <string name="btn_iniciar">START</string>
+    <string name="btn_parar">STOP</string>
+    <string name="btn_reiniciar">RESET</string>
+    <string name="btn_vuelta">LAP</string>
+    <string name="tv_cronometro">00:00:00</string>
+</resources>
